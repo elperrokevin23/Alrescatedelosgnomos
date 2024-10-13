@@ -38,6 +38,15 @@ public class Isla {
     }
 }
 
+ public boolean colision(Pep pep) {
+        // Verifica si Pep está sobre la isla
+        return pep.getX() + pep.getAncho() / 2 > this.x - this.ancho / 2 &&
+               pep.getX() - pep.getAncho() / 2 < this.x + this.ancho / 2 &&
+               pep.getY() + pep.getAlto() / 2 > this.y - this.alto / 2 &&
+               pep.getY() + pep.getAlto() / 2 < this.y + this.alto / 2;
+    }
+}
+
 
 
 
