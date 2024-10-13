@@ -75,4 +75,19 @@ public class Pep {
     public int getAlto() {
         return alto;
     }
+	public void actualizar(Isla isla) {
+    // Aplica la gravedad si está en salto
+    if (enSalto) {
+        y += velocidadVertical;
+        velocidadVertical += GRAVEDAD;
+
+        // Verifica si Pep ha aterrizado
+        if (isla.colision(this)) {
+            y = isla.getY() - getAlto() / 2; // Asegúrate de que se quede en la parte superior de la isla
+            enSalto = false; // Ya no está en salto
+            velocidadVertical = 0;
+        }
+    }
 }
+}
+
