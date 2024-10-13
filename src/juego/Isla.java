@@ -9,7 +9,7 @@ public class Isla {
 
     // Constructor que inicializa la posición y el tamaño de la isla
     public Isla(int x, int y) {
-        this.x = x;
+        this.x = x - ancho/2;  // Desplazar la isla a la izquierda 
         this.y = y;
         this.ancho = 100;  // Ancho fijo de la isla
         this.alto = 30;    // Alto fijo de la isla
